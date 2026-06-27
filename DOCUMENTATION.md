@@ -27,6 +27,61 @@ CivicEye AI is architected as an extremely lightweight client-side application s
 
 ---
 
+## 📂 Project Structure
+
+```
+├── assets/                        # Static application assets
+│   └── .aistudio/                 # AI Studio integration configurations
+├── backend/                       # Java Spring Boot 3.x Backend Service
+│   ├── pom.xml                    # Maven dependencies (Spring Boot, Firebase, HTTP)
+│   └── src/main/java/com/civiceye/backend/
+│       ├── config/                # Spring Security and Firebase Initializers
+│       ├── controller/            # REST Controllers (Auth, Issues, Copilot)
+│       ├── model/                 # Data Models (GPS, Issue, Verification, etc.)
+│       └── service/               # Algorithms & Google Gemini API integrations
+├── screenshots/                   # Application preview screenshots
+│   ├── Admin-insights             # Admin predictive risk hotspots screen
+│   ├── authority-portal           # Authority queue and AI Copilot consultation screen
+│   ├── citizen-dashboard          # Citizen geofenced reporting and tracking screen
+│   ├── Home-page                  # Portal selector landing screen
+│   ├── login-page                 # Multi-role authentication gateway screen
+│   └── transparency-wall          # Public resolution logs & ratings screen
+├── src/                           # React 19 Frontend Web App
+│   ├── components/                # Interactive UI Modals & Dashboards
+│   │   ├── AdminDashboard.tsx     # Admin forecasts & risk mapping UI
+│   │   ├── AuthorityDashboard.tsx # AI Copilot advisory & issue resolutions
+│   │   ├── CitizenDashboard.tsx   # Verified incident feeds & active reporting
+│   │   ├── Header.tsx             # Global application navigation bar
+│   │   ├── LandingPage.tsx        # Modern homepage entrance portal
+│   │   ├── LoginScreen.tsx        # Secure credential gatekeeper
+│   │   ├── ReportIssueModal.tsx   # AI-assisted hazard reporter form
+│   │   └── TransparencyWall.tsx   # Public resolution wall with location tracking
+│   ├── lib/                       # Firebase services & middleware interceptors
+│   │   ├── apiInterceptor.ts      # Live sandbox API network interceptor
+│   │   └── firebase.ts            # Client-side Firebase SDK configuration
+│   ├── App.tsx                    # Main navigation routing and layout config
+│   ├── index.css                  # Global Tailwind CSS imports and fonts styling
+│   ├── main.tsx                   # Client entrypoint compiler mount
+│   └── types.ts                   # Unified type definitions shared across systems
+├── .env.example                   # Prototype environment template
+├── .gitignore                     # Git tracking exclusions rules
+├── civiceye_db.json               # Local evaluation sandbox JSON database
+├── DOCUMENTATION.md               # Detailed system technical specification manual
+├── firebase-applet-config.json    # Connected Firebase environment credentials
+├── firebase-blueprint.json        # Firestore database blueprint schemas
+├── firestore.rules                # Role-based Cloud Security access rules
+├── index.html                     # HTML single page application shell
+├── metadata.json                  # AI Studio frame permissions and name
+├── package-lock.json              # Frozen dependencies lockfile
+├── package.json                   # Web compilation build scripts
+├── README.md                      # General introduction and project overview
+├── server.ts                      # Optional Node.js Express sandbox API server
+├── tsconfig.json                  # Compiler configuration rules
+└── vite.config.ts                 # Vite compiler asset optimization options
+```
+
+---
+
 ## 🤖 Real-Time Agentic AI Integrations
 
 CivicEye AI integrates **four distinct AI layers** to ensure high-fidelity community tracking and automation:
