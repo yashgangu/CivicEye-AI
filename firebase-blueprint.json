@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User authorization profile and stats tracker",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "The user's email address"
+        },
+        "name": {
+          "type": "string",
+          "description": "The user's full name"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["citizen", "authority", "admin"],
+          "description": "The authorization role of the user"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "URL to the user's avatar image"
+        },
+        "rewardPoints": {
+          "type": "number",
+          "description": "The user's civic reward points"
+        },
+        "achievements": {
+          "type": "array",
+          "description": "List of user achievements"
+        }
+      },
+      "required": ["email", "name", "role"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Collection of user profiles containing their authorization roles and points"
+    }
+  }
+}

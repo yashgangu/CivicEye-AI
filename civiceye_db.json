@@ -1,0 +1,222 @@
+{
+  "issues": [
+    {
+      "id": "civic-issue-1",
+      "title": "Deep Pavement Crater outside Westside High School",
+      "description": "Massive pothole has opened up in the middle of Broad Street right next to the school crossing. It forces cars to swerve into oncoming traffic, posing a major hazard during school hours.",
+      "category": "Pothole",
+      "severity": "High",
+      "confidenceScore": 96,
+      "department": "Roads & Transportation",
+      "status": "Resolved",
+      "imageUrl": "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&w=800&q=80",
+      "resolvedImageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
+      "resolvedNotes": "The Roads & Transportation repair crew deployed an asphalt patch truck within 24 hours of reporting. The pothole has been fully excavation-filled and re-paved. School crossing markings have been restored.",
+      "resolvedAt": "2026-06-24T14:30:00.000Z",
+      "resolutionTimeDays": 1,
+      "gps": {
+        "lat": 40.7128,
+        "lng": -74.006,
+        "address": "452 Broad St, New York, NY 10007 (Adjacent to Westside High)"
+      },
+      "reporterEmail": "citizen.alex@civic.org",
+      "reporterName": "Alex Rivera",
+      "verificationCount": 18,
+      "rejectionCount": 0,
+      "verifications": [
+        {
+          "citizenEmail": "yashgangurde012@gmail.com",
+          "type": "confirm",
+          "comment": "Confirmed! Saw school buses struggling to dodge this yesterday morning. Awesome to see it patched up so fast!",
+          "timestamp": "2026-06-24T16:00:00.000Z"
+        }
+      ],
+      "impact": {
+        "riskLevel": "High",
+        "accidentProbability": 85,
+        "environmentalImpact": "Negligible. Minor dust dispersion from loose road substrate.",
+        "populationAffected": 1200,
+        "nearbyFacilities": [
+          "Westside High School (0.01km)",
+          "Metro Crossing Bus Stop (0.05km)"
+        ],
+        "explanation": "High severity due to the extreme danger to student safety during school drop-off and pickup. Swerving vehicles increase head-on collision risks near a pedestrian-dense school zone."
+      },
+      "priorityScore": 82,
+      "priorityReason": "High risk due to proximity of high school and rapid community support.",
+      "resolution": {
+        "responsibleDepartment": "Roads & Transportation",
+        "suggestedResolution": "Excavate damaged base layers, apply hot-mix asphalt patching, compact with drum roller, and paint school crossing markings.",
+        "estimatedCost": "$1,200",
+        "estimatedCompletionTime": "24 Hours",
+        "requiredWorkforce": "3 Road Technicians"
+      },
+      "createdAt": "2026-06-23T09:15:00.000Z",
+      "citizenSatisfactionScore": 5
+    },
+    {
+      "id": "civic-issue-2",
+      "title": "Burst Water Main Flooding Emergency Entrance",
+      "description": "A high-pressure public supply line has ruptured, causing thousands of gallons of water to flood the street, completely blocking the Mercy Hospital emergency ambulance lane.",
+      "category": "Water Leakage",
+      "severity": "Critical",
+      "confidenceScore": 98,
+      "department": "Water & Sanitation",
+      "status": "In Progress",
+      "imageUrl": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80",
+      "gps": {
+        "lat": 40.715,
+        "lng": -74.009,
+        "address": "78 Mercy Hospital Blvd, New York, NY 10013"
+      },
+      "reporterEmail": "hospital.facility@mercy.org",
+      "reporterName": "Dr. Sarah Chen",
+      "verificationCount": 12,
+      "rejectionCount": 0,
+      "verifications": [
+        {
+          "citizenEmail": "citizen.alex@civic.org",
+          "type": "confirm",
+          "comment": "Ambulances are currently being diverted to the side gate. Extremely critical!",
+          "timestamp": "2026-06-25T11:00:00.000Z"
+        }
+      ],
+      "impact": {
+        "riskLevel": "Critical",
+        "accidentProbability": 90,
+        "environmentalImpact": "Potable water wasting, local street erosion, and basement flooding.",
+        "populationAffected": 5000,
+        "nearbyFacilities": [
+          "Mercy Hospital Emergency Room (0.02km)",
+          "Mercy Pharmacy (0.05km)"
+        ],
+        "explanation": "Extremely critical risk because it obstructs ambulances from entering the city's main Emergency Response facility. Any delay in emergency services directly threatens human lives."
+      },
+      "priorityScore": 96,
+      "priorityReason": "Critical score because hospital access is compromised and hospital operations are heavily affected.",
+      "resolution": {
+        "responsibleDepartment": "Water & Sanitation",
+        "suggestedResolution": "Shut off local control valves, excavate surrounding street, replace the burst 12-inch cast-iron pipeline segment, backfill, and restore emergency paving.",
+        "estimatedCost": "$8,500",
+        "estimatedCompletionTime": "6 Hours",
+        "requiredWorkforce": "5 Sanitation Engineers"
+      },
+      "createdAt": "2026-06-25T10:12:00.000Z"
+    },
+    {
+      "id": "civic-issue-3",
+      "title": "Industrial Waste and Scrap Metal Dump",
+      "description": "Massive pile of rusted metal scrap, discarded car batteries, and hazardous waste dumped overnight directly on Central Park's jogging trail. Children often play in this green area.",
+      "category": "Garbage Dump",
+      "severity": "High",
+      "confidenceScore": 92,
+      "department": "Waste Management",
+      "status": "Resolved",
+      "imageUrl": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=800&q=80",
+      "resolvedImageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+      "resolvedNotes": "The Waste Management hazardous response team collected all toxic materials, including 4 leaking car batteries. Scrap metals were loaded into haulers and sent to recycling centers. The soil has been treated and verified toxic-free.",
+      "resolvedAt": "2026-06-25T18:45:00.000Z",
+      "resolutionTimeDays": 2,
+      "gps": {
+        "lat": 40.711,
+        "lng": -74.003,
+        "address": "Central Park East Jogging Trail (Corner of 5th Ave & 72nd St)"
+      },
+      "reporterEmail": "parks.patrol@city.gov",
+      "reporterName": "Officer Higgins",
+      "verificationCount": 24,
+      "rejectionCount": 0,
+      "verifications": [],
+      "impact": {
+        "riskLevel": "High",
+        "accidentProbability": 70,
+        "environmentalImpact": "Acid leak from batteries into local park soil, threatening nearby water table.",
+        "populationAffected": 3500,
+        "nearbyFacilities": [
+          "Central Park Children's Playground (0.1km)",
+          "Lake Conservancy (0.2km)"
+        ],
+        "explanation": "The inclusion of lithium-acid batteries makes this an environmental hazard. Rusted scrap metal also poses tetanus risks to children playing nearby."
+      },
+      "priorityScore": 79,
+      "priorityReason": "High score due to high toxic threat to park ecosystem and massive community verified responses.",
+      "resolution": {
+        "responsibleDepartment": "Waste Management",
+        "suggestedResolution": "Dispatch hazardous waste team with specialized transport, clear battery acid footprint, soil remediation, and recycle steel scrap.",
+        "estimatedCost": "$3,800",
+        "estimatedCompletionTime": "12 Hours",
+        "requiredWorkforce": "4 HAZMAT Technicians"
+      },
+      "createdAt": "2026-06-23T18:00:00.000Z",
+      "citizenSatisfactionScore": 5
+    },
+    {
+      "id": "civic-issue-4",
+      "title": "Damaged Storm Pole & Hanging Live Wires",
+      "description": "Strong winds cracked a wooden utility pole, leaving it leaning at a 45-degree angle. High voltage wires are hanging down just 6 feet above the busy pedestrian sidewalk.",
+      "category": "Fallen Electric Pole",
+      "severity": "Critical",
+      "confidenceScore": 95,
+      "department": "Power & Electricity",
+      "status": "Reported",
+      "imageUrl": "https://images.unsplash.com/photo-1471644865543-ef7341011a4b?auto=format&fit=crop&w=800&q=80",
+      "gps": {
+        "lat": 40.7165,
+        "lng": -74.001,
+        "address": "122 Grand St, New York, NY 10013"
+      },
+      "reporterEmail": "yashgangurde012@gmail.com",
+      "reporterName": "Yash Gangurde",
+      "verificationCount": 4,
+      "rejectionCount": 0,
+      "verifications": [],
+      "impact": {
+        "riskLevel": "Critical",
+        "accidentProbability": 95,
+        "environmentalImpact": "Potential electric fires and power grids disruption.",
+        "populationAffected": 800,
+        "nearbyFacilities": [
+          "Grand Street Subway Station (0.08km)",
+          "Soho Market Row (0.1km)"
+        ],
+        "explanation": "Critical danger of fatal electrocution to any pedestrians walking on Grand Street. The leaning pole could completely collapse, ripping down main lines and causing a widespread local blackout."
+      },
+      "priorityScore": 93,
+      "priorityReason": "Extreme danger of pedestrian contact with active 13kV power lines.",
+      "resolution": {
+        "responsibleDepartment": "Power & Electricity",
+        "suggestedResolution": "De-energize the grid block, install temporary wire support, replace utility pole with concrete alternative, re-tension power wires, and safety-verify voltage ground.",
+        "estimatedCost": "$5,200",
+        "estimatedCompletionTime": "8 Hours",
+        "requiredWorkforce": "4 Linemen"
+      },
+      "createdAt": "2026-06-25T19:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "email": "yashgangurde012@gmail.com",
+      "name": "Yash Gangurde",
+      "role": "citizen",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80",
+      "rewardPoints": 150,
+      "achievements": ["Top Verifier", "Neighborhood Guardian"]
+    },
+    {
+      "email": "officer@city.gov",
+      "name": "Director Sarah Jenkins",
+      "role": "authority",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+      "rewardPoints": 420,
+      "achievements": ["Resolution Expert", "Smart City Leader"]
+    },
+    {
+      "email": "admin@city.gov",
+      "name": "Commissioner Dave Miller",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80",
+      "rewardPoints": 1000,
+      "achievements": ["City Overseer", "Strategic Planner"]
+    }
+  ]
+}

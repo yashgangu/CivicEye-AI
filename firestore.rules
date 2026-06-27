@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global safety net: Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Standard helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // User Profile Validation
+    function isValidUserProfile(data) {
+      return data.keys().hasAll(['email', 'name', 'role']) &&
+             data.keys().size() <= 6 &&
+             data.email is string && data.email.size() <= 256 &&
+             data.name is string && data.name.size() <= 128 &&
+             data.role is string && (data.role == 'citizen' || data.role == 'authority' || data.role == 'admin') &&
+             (!('avatar' in data) || (data.avatar is string && data.avatar.size() <= 512)) &&
+             (!('rewardPoints' in data) || data.rewardPoints is number) &&
+             (!('achievements' in data) || data.achievements is list);
+    }
+
+    // Test Connection Path (Allows client connection testing)
+    match /test/{docId} {
+      allow read: if true;
+    }
+
+    // User Profile Match Block
+    match /users/{userId} {
+      // User can always get their own profile
+      allow get: if isSignedIn() && isOwner(userId);
+      
+      // Admin override for get/list/delete
+      allow get, list, delete: if isSignedIn() && 
+                                exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                                get(/databases/$(database)/documents/users/$(request.auth.uid)).data != null &&
+                                get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      
+      // User can create their own profile, or admin can create any
+      allow create: if isSignedIn() && isValidId(userId) && (
+        isOwner(userId) || 
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data != null &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin')
+      ) && isValidUserProfile(incoming());
+      
+      // User can update their own profile, but cannot change their role or email
+      allow update: if isSignedIn() && isValidId(userId) && isValidUserProfile(incoming()) && (
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data != null &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin') || 
+        (isOwner(userId) && 
+         incoming().role == existing().role && 
+         incoming().email == existing().email && 
+         incoming().diff(existing()).affectedKeys().hasOnly(['name', 'avatar', 'rewardPoints', 'achievements'])
+        )
+      );
+    }
+  }
+}

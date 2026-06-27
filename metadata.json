@@ -1,0 +1,11 @@
+{
+  "name": "CivicEye AI",
+  "description": "Autonomous Community Resolution Platform powered by Gemini AI. Detect, analyze, prioritize, and collaboratively resolve municipal issues with glassmorphism design and fully verified transparency walls.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
